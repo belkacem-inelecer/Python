@@ -77,7 +77,11 @@ while 1:
                     break
 
     # Show frame with results
+    cv2.namedWindow('Mask Detection', cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty('Mask Detection', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
     cv2.imshow('Mask Detection', img)
+
+   
     k = cv2.waitKey(30) & 0xff
     if k == 27:
         break
